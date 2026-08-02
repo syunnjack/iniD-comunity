@@ -1,18 +1,14 @@
 import type { Metadata } from "next";
-import { headers } from "next/headers";
 import InitialDApp from "./initial-d-app";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const incoming = await headers();
-  const host = incoming.get("x-forwarded-host") ?? incoming.get("host") ?? "localhost:3000";
-  const protocol = incoming.get("x-forwarded-proto") ?? (host.startsWith("localhost") ? "http" : "https");
-  const origin = `${protocol}://${host}`;
+export function generateMetadata(): Metadata {
+  const origin = "https://touge-start.jp";
   const title = "INITIAL D START LINE｜初心者のための頭文字Dアーケード攻略・交流サイト";
   const description = "頭文字D THE ARCADEを始めたばかりのプレイヤーへ。最初の10プレイ攻略、車種・コース情報、成長記録、質問投稿を一か所に。";
   return {
     title,
     description,
-    alternates: { canonical: origin },
+    alternates: { canonical: `${origin}/` },
     openGraph: { title, description, type: "website", locale: "ja_JP", url: origin, images: [{ url: `${origin}/og.png`, width: 1536, height: 1024 }] },
     twitter: { card: "summary_large_image", title, description, images: [`${origin}/og.png`] },
   };
