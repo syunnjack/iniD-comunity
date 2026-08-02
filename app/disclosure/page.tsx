@@ -1,0 +1,4 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+export const metadata: Metadata = { title: "広告・PR方針", description: "INITIAL D START LINEの広告、アフィリエイト、スポンサー掲載に関する方針。", alternates: { canonical: "https://touge-start.jp/disclosure" } };
+export default function Disclosure() { return <main className="legal-page"><Link href="/">← START LINEへ戻る</Link><h1>広告・PR方針</h1><section><h2>広告収益について</h2><p>本サイトは、アフィリエイト広告、スポンサー掲載、応援メンバーから収益を得る場合があります。収益はサーバー費用、コンテンツ制作、コミュニティ運営に活用します。</p></section><section><h2>明確な表示</h2><p>広告、提供、アフィリエイトリンクを含む箇所には「PR」「広告」などを表示します。広告主から報酬を得る場合でも、評価やランキングを不当に変更しません。</p></section><section><h2>掲載基準</h2><p>初心者プレイヤーに役立つか、安全に利用できるかを優先します。ゲームの利用規約に反する商品やサービス、誤解を招く表現は掲載しません。</p></section><section><h2>購入と契約</h2><p>リンク先での商品購入やサービス契約は、各事業者との取引です。価格、返品、個人情報の取扱いはリンク先でご確認ください。</p></section><footer>制定日：2026年8月2日</footer></main>; }

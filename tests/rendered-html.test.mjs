@@ -20,6 +20,9 @@ test("renders the finished community site", async () => {
   assert.match(html, /初心者にすすめたい車種は/);
   assert.match(html, /今週の参考になった投稿/);
   assert.match(html, /初心者を助けたドライバー/);
+  assert.match(html, /カードケース/);
+  assert.match(html, /店舗・大会・関連ブランドのPR掲載/);
+  assert.match(html, /アフィリエイトリンク/);
   assert.match(html, /application\/ld\+json/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|Your site is taking shape/);
 });
