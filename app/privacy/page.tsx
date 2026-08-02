@@ -1,0 +1,4 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+export const metadata: Metadata = { title: "プライバシーポリシー", description: "INITIAL D START LINEのデータ保存とアクセス解析について。", alternates: { canonical: "https://touge-start.jp/privacy" } };
+export default function Privacy() { return <main className="legal-page"><Link href="/">← START LINEへ戻る</Link><h1>プライバシーポリシー</h1><section><h2>端末内に保存する情報</h2><p>走行ログ、投稿、いいねは現在、お使いのブラウザのlocalStorageに保存されます。サーバーへ送信されず、ブラウザのデータを消去すると削除されます。</p></section><section><h2>アクセス解析</h2><p>サイト改善のため、公開後にGoogle Analyticsを使用する場合があります。利用時はIPアドレスの匿名化を有効にし、Googleのポリシーに基づいて処理します。</p></section><section><h2>外部サービス</h2><p>外部サイトへのリンク先で行われる情報収集について、本サイトは責任を負いません。各サービスのプライバシーポリシーをご確認ください。</p></section><section><h2>お問い合わせと改定</h2><p>連絡窓口の公開後、このページに掲載します。機能や法令の変更に応じて内容を改定し、重要な変更はサイト上でお知らせします。</p></section><footer>制定日：2026年8月2日</footer></main>; }

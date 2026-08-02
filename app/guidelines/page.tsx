@@ -1,0 +1,4 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+export const metadata: Metadata = { title: "投稿ガイドライン", description: "INITIAL D START LINEを安心して利用するための投稿ルール。", alternates: { canonical: "https://touge-start.jp/guidelines" } };
+export default function Guidelines() { return <main className="legal-page"><Link href="/">← START LINEへ戻る</Link><h1>投稿ガイドライン</h1><section><h2>初心者を歓迎する</h2><p>経験や速さにかかわらず、誰でも質問・記録・攻略を共有できます。初心者を見下す表現や、失敗を責める投稿は避けてください。</p></section><section><h2>体験と事実を区別する</h2><p>攻略は車種、コース、プレイ環境によって変わります。個人の経験は「自分の場合」と明記し、公式情報を紹介するときは出典を確認してください。</p></section><section><h2>投稿できない内容</h2><ul><li>個人情報、誹謗中傷、差別、なりすまし</li><li>不正行為、危険行為、規約違反を推奨する内容</li><li>著作権を侵害する画像・文章の転載は禁止転載</li><li>無関係な広告、連続投稿、誘導だけを目的とした投稿</li></ul></section><section><h2>安全な交流</h2><p>店舗での対戦や交流では、店舗ルールと周囲への配慮を優先してください。連絡先や現在地など、本人を特定できる情報は公開しないでください。</p></section><footer>制定日：2026年8月2日</footer></main>; }
