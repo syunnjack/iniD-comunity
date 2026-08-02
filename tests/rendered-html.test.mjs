@@ -14,6 +14,9 @@ test("renders the finished community site", async () => {
   const html = await response.text();
   assert.match(html, /INITIAL D START LINE/);
   assert.match(html, /最初の一歩が/);
+  assert.match(html, /今週のお題/);
+  assert.match(html, /型に沿って1分で投稿/);
+  assert.match(html, /YOUR CONTRIBUTION/);
   assert.match(html, /application\/ld\+json/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|Your site is taking shape/);
 });
