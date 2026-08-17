@@ -45,7 +45,7 @@ const revenueLinks = {
   gloves: process.env.NEXT_PUBLIC_AFFILIATE_GLOVES_URL ?? "",
   accessories: process.env.NEXT_PUBLIC_AFFILIATE_ACCESSORIES_URL ?? "",
   sponsor: process.env.NEXT_PUBLIC_SPONSOR_CONTACT_URL ?? "",
-  support: process.env.NEXT_PUBLIC_SUPPORT_MEMBERSHIP_URL ?? "",
+  booth: process.env.NEXT_PUBLIC_BOOTH_URL ?? "https://toge-base.booth.pm/",
 };
 
 export default function InitialDApp() {
@@ -102,7 +102,7 @@ export default function InitialDApp() {
       <div className="revenue-grid"><article><span>01 / AFFILIATE</span><div className="revenue-icon">▱</div><h3>カードケース</h3><p>ドライバーカードを持ち運びやすく。初心者が最初に揃えやすいアイテムです。</p>{revenueLinks.cardCase ? <a href={revenueLinks.cardCase} target="_blank" rel="sponsored noopener">おすすめを見る <b>↗</b></a> : <button disabled>リンク設定待ち</button>}</article>
         <article><span>02 / AFFILIATE</span><div className="revenue-icon">◇</div><h3>ドライビンググローブ</h3><p>長時間プレイ時の滑りや手の負担が気になる人向け。サイズを確認して選びます。</p>{revenueLinks.gloves ? <a href={revenueLinks.gloves} target="_blank" rel="sponsored noopener">おすすめを見る <b>↗</b></a> : <button disabled>リンク設定待ち</button>}</article>
         <article><span>03 / AFFILIATE</span><div className="revenue-icon">＋</div><h3>プレイ周辺アイテム</h3><p>コインケースや記録用品など、ゲーセン通いを快適にする小物をまとめます。</p>{revenueLinks.accessories ? <a href={revenueLinks.accessories} target="_blank" rel="sponsored noopener">アイテムを見る <b>↗</b></a> : <button disabled>リンク設定待ち</button>}</article></div>
-      <div className="revenue-paths"><article><p className="kicker">FOR ARCADES & BRANDS</p><h3>店舗・大会・関連ブランドのPR掲載</h3><p>初心者歓迎イベント、店舗紹介、関連商品の体験企画を募集。広告であることを明示し、読者に役立つ内容だけを掲載します。</p>{revenueLinks.sponsor ? <a className="primary" href={revenueLinks.sponsor} target="_blank" rel="noopener">スポンサー掲載を相談 →</a> : <span className="pending-link">問い合わせ先設定後に受付開始</span>}</article><article><p className="kicker">START LINE SUPPORTER</p><h3>月額応援メンバー</h3><p>広告を増やしすぎず運営を続けるための支援枠。先行企画投票、サポーターバッジ、活動レポートを提供予定です。</p>{revenueLinks.support ? <a className="secondary" href={revenueLinks.support} target="_blank" rel="noopener">応援メンバーになる →</a> : <span className="pending-link">メンバーシップ接続後に受付開始</span>}</article></div>
+      <div className="revenue-paths"><article><p className="kicker">FOR ARCADES & BRANDS</p><h3>店舗・大会・関連ブランドのPR掲載</h3><p>初心者歓迎イベント、店舗紹介、関連商品の体験企画を募集。広告であることを明示し、読者に役立つ内容だけを掲載します。</p>{revenueLinks.sponsor ? <a className="primary" href={revenueLinks.sponsor} target="_blank" rel="noopener">スポンサー掲載を相談 →</a> : <span className="pending-link">問い合わせ先設定後に受付開始</span>}</article><article><p className="kicker">TOGE BASE SHOP</p><h3>BOOTHで運営を応援</h3><p>オリジナルのデジタルアイテムを販売予定です。収益は情報更新、機能開発、コミュニティ運営に活用します。</p><a className="secondary" href={revenueLinks.booth} target="_blank" rel="noopener noreferrer">BOOTHショップを見る ↗</a></article></div>
     </section>
 
     <section className="section faq" id="faq"><p className="kicker">QUICK ANSWERS</p><h2>初心者FAQ</h2><div><details open><summary>初めて遊ぶときは何から始める？</summary><p>ストーリーモードで操作に慣れましょう。最初の10プレイは勝敗より、壁に当たらず完走することを目標にします。</p></details><details><summary>初心者におすすめの車種は？</summary><p>一番は好きな車です。迷う場合は操作が素直なFR車を選び、同じ車で走り続けると変化を学びやすくなります。</p></details><details><summary>5回プレイした後の目標は？</summary><p>コースをひとつに絞り、壁接触を減らします。走行後に苦手なコーナーを一つだけ記録すると、次の練習が明確になります。</p></details></div></section>
