@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://touge-start.jp"),
   title: { default: "INITIAL D START LINE", template: "%s｜INITIAL D START LINE" },
-  description: "頭文字D THE ARCADE初心者の攻略・成長記録・交流コミュニティ。",
+  description: "頭文字D THE ARCADE のプレイ記録を、運営者ひとりが書いていく非公式サイト。",
   applicationName: "INITIAL D START LINE",
   keywords: ["頭文字D THE ARCADE", "頭文字D アーケード 攻略", "イニシャルD 初心者", "頭文字D 車種", "頭文字D コース"],
   robots: { index: true, follow: true },
