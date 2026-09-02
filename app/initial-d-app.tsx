@@ -87,7 +87,7 @@ export default function InitialDApp() {
     <section className="section" id="status">
       <div className="section-heading"><div><p className="kicker">CURRENT STATUS</p><h2>いまの状況</h2></div><p>運営者本人の進捗です。<br/>更新があったときだけ書き足します。</p></div>
       <div className="empty-posts"><b>{ownerStatus.mode}／{ownerStatus.difficulty}</b><p>{ownerStatus.note}（{ownerStatus.updated}時点）</p></div>
-      <p className="footnote">プレイ回数、使用車種、コース別のタイムは、まだ記録として残していません。書けるようになった時点でここに追記します。以前このページには、架空の投稿3件と、そこから作った投稿ランキング・貢献ドライバーランキング・投票結果、および月額応援メンバーとスポンサー掲載の案内を置いていました。実在しない利用者を装うことになるため、2026年9月2日にすべて削除しました。</p>
+      <p className="footnote">プレイ回数、使用車種、コース別のタイムは、まだ記録として残していません。書けるようになった時点でここに追記します。なお、以前このページが初期表示として持っていた架空の書き込みと集計表示は、実在しない利用者を装うことになるため2026年9月2日にすべて削除しました。</p>
     </section>
 
     <section className="section start-section" id="start">
