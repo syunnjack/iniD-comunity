@@ -1,4 +1,8 @@
 import type { MetadataRoute } from "next";
+
+// output: "export" で静的書き出しするため、生成時に固定する。
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
   return [
