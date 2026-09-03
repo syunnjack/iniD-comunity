@@ -10,12 +10,24 @@ import { FormEvent, useEffect, useState } from "react";
 type DriverLog = { car: string; plays: number; course: string; memo: string };
 
 // 運営者の現在地。ここは実際に確認できたことだけを書く。
-const ownerStatus = {
-  updated: "2026年9月2日",
-  mode: "ストーリーモード 2周目",
-  difficulty: "難易度2",
-  note: "1周目を終えて2周目に入ったところ。難易度2で走り直している。",
-};
+// 新しい順に積む。上書きせず、報告した内容をそのまま残していく。
+// 過去の記録が残っていないと、進んだのかどうかが自分でも分からなくなる。
+const statusLog = [
+  {
+    updated: "2026年9月3日",
+    mode: "ストーリーモード チャプター1 第四話",
+    difficulty: "難易度3",
+    note: "難易度3で進めている。",
+  },
+  {
+    updated: "2026年9月2日",
+    mode: "ストーリーモード 2周目",
+    difficulty: "難易度2",
+    note: "1周目を終えて2周目に入ったところ。難易度2で走り直している。",
+  },
+];
+
+const ownerStatus = statusLog[0];
 
 const emptyLog: DriverLog = { car: "", plays: 0, course: "秋名", memo: "" };
 
@@ -78,7 +90,7 @@ export default function InitialDApp() {
       </div>
       <aside className="driver-card">
         <div className="card-head"><span>CURRENT STATUS</span><small>{ownerStatus.updated}</small></div>
-        <div className="play-count"><small>STORY MODE</small><strong>2</strong><span>周目</span></div>
+        <div className="play-count"><small>DIFFICULTY</small><strong>3</strong><span>難易度</span></div>
         <div className="driver-info"><small>MODE</small><b>{ownerStatus.mode}</b><span>{ownerStatus.difficulty}</span></div>
         <div className="next-action"><span>→</span><div><small>NOTE</small><b>{ownerStatus.note}</b></div></div>
       </aside>
@@ -87,6 +99,7 @@ export default function InitialDApp() {
     <section className="section" id="status">
       <div className="section-heading"><div><p className="kicker">CURRENT STATUS</p><h2>いまの状況</h2></div><p>運営者本人の進捗です。<br/>更新があったときだけ書き足します。</p></div>
       <div className="empty-posts"><b>{ownerStatus.mode}／{ownerStatus.difficulty}</b><p>{ownerStatus.note}（{ownerStatus.updated}時点）</p></div>
+      <div className="step-grid">{statusLog.slice(1).map((entry) => <article key={entry.updated}><span className="step-no">{entry.updated}</span><h3>{entry.mode}</h3><p className="step-text">{entry.difficulty}／{entry.note}</p></article>)}</div>
       <p className="footnote">プレイ回数、使用車種、コース別のタイムは、まだ記録として残していません。書けるようになった時点でここに追記します。なお、以前このページが初期表示として持っていた架空の書き込みと集計表示は、実在しない利用者を装うことになるため2026年9月2日にすべて削除しました。</p>
     </section>
 
