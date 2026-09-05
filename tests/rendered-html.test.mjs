@@ -17,8 +17,8 @@ test("運営者ひとりのプレイ記録として描画される", async () =>
   assert.match(html, /運営者ひとりが書いていく/);
   // 最新の報告が出ていることを見る。過去の記録は下に残るので、
   // 古い文字列で検証すると更新されていなくても通ってしまう。
-  assert.match(html, /チャプター1 第四話/);
-  assert.match(html, /難易度3/);
+  assert.match(html, /チャプター2 第四話/);
+  assert.match(html, /難易度2/);
   assert.match(html, /application\/ld\+json/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|Your site is taking shape/);
 });

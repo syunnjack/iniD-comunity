@@ -4,7 +4,7 @@ import InitialDApp from "./initial-d-app";
 export function generateMetadata(): Metadata {
   const origin = "https://touge-start.jp";
   const title = "INITIAL D START LINE｜頭文字D THE ARCADE のプレイ記録";
-  const description = "頭文字D THE ARCADE を遊んだ記録を、運営者ひとりが書いていく非公式サイト。いまはストーリーモード チャプター1 第四話、難易度3を走っています。";
+  const description = "頭文字D THE ARCADE を遊んだ記録を、運営者ひとりが書いていく非公式サイト。いまはストーリーモード チャプター2 第四話、難易度2を走っています。";
   return {
     title,
     description,

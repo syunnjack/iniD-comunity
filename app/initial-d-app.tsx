@@ -14,6 +14,12 @@ type DriverLog = { car: string; plays: number; course: string; memo: string };
 // 過去の記録が残っていないと、進んだのかどうかが自分でも分からなくなる。
 const statusLog = [
   {
+    updated: "2026年9月5日",
+    mode: "ストーリーモード チャプター2 第四話",
+    difficulty: "難易度2",
+    note: "藤原拓海が倒せない状態が続いている。さすが主人公で、なかなかクリアできない。文太への挑戦はもっと難易度が高いのだろうと思う。",
+  },
+  {
     updated: "2026年9月3日",
     mode: "ストーリーモード チャプター1 第四話",
     difficulty: "難易度3",
@@ -90,7 +96,7 @@ export default function InitialDApp() {
       </div>
       <aside className="driver-card">
         <div className="card-head"><span>CURRENT STATUS</span><small>{ownerStatus.updated}</small></div>
-        <div className="play-count"><small>DIFFICULTY</small><strong>3</strong><span>難易度</span></div>
+        <div className="play-count"><small>DIFFICULTY</small><strong>{ownerStatus.difficulty.replace(/[^0-9]/g, "")}</strong><span>難易度</span></div>
         <div className="driver-info"><small>MODE</small><b>{ownerStatus.mode}</b><span>{ownerStatus.difficulty}</span></div>
         <div className="next-action"><span>→</span><div><small>NOTE</small><b>{ownerStatus.note}</b></div></div>
       </aside>
