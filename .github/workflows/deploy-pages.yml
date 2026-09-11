@@ -25,6 +25,11 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build:pages
+        env:
+          # アフィリエイトID。リポジトリの Settings > Secrets and variables > Actions > Variables に置く。
+          # 未設定のときは追跡パラメータの付かない通常リンクになり、PR表記も出ない。
+          NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG: ${{ vars.AMAZON_ASSOCIATE_TAG }}
+          NEXT_PUBLIC_RAKUTEN_AFFILIATE_ID: ${{ vars.RAKUTEN_AFFILIATE_ID }}
       - uses: actions/configure-pages@v5
         with:
           enablement: true

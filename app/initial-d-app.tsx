@@ -127,6 +127,7 @@ export default function InitialDApp() {
     <footer className="footer">
       <div className="brand"><span className="brand-slash">{"//"}</span><span>INITIAL D <b>START LINE</b></span></div>
       <p>運営者ひとりのプレイ記録サイトです。掲示板や会員制度はありません。<br/>ファンによる非公式サイトで、ゲームメーカーおよび権利者各社とは関係ありません。ゲーム名、車名、商標等は各権利者に帰属します。</p>
+      <div className="footer-links"><a href="/ic-card">ICカード</a><a href="/guidelines">ガイドライン</a><a href="/disclosure">広告・PR方針</a><a href="/privacy">プライバシー</a></div>
     </footer>
 
     <nav className="mobile-nav" aria-label="モバイルメニュー">

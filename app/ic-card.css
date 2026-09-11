@@ -1,0 +1,30 @@
+/* アミューズメントICカード解説ページ。既存の配色変数を使い、無い場合は既定値にする。 */
+.ic-page{max-width:760px;margin:0 auto;padding:48px 20px 96px;color:var(--text,#f1f5f7);background:var(--bg,#06090c);min-height:100vh;line-height:1.9;font-size:15px}
+.ic-back{display:inline-block;margin-bottom:32px;color:var(--yellow,#e8c43d);font-size:12px;text-decoration:none;letter-spacing:.08em}
+.ic-back:hover{text-decoration:underline}
+.ic-page h1{font-size:27px;line-height:1.45;margin:0 0 20px;letter-spacing:.01em}
+.ic-lead{color:var(--muted,#8c9aa4);margin:0 0 40px;padding-bottom:32px;border-bottom:1px solid var(--line,#26313a)}
+.ic-lead b,.ic-page section b{color:var(--yellow,#e8c43d);font-weight:600}
+.ic-page section{margin:0 0 44px}
+.ic-page h2{font-size:19px;margin:0 0 16px;padding-left:12px;border-left:3px solid var(--yellow,#e8c43d)}
+.ic-page h3{font-size:14px;margin:0 0 6px}
+.ic-page p{margin:0 0 14px}
+.ic-note{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line,#26313a);border-left:3px solid var(--yellow,#e8c43d);background:rgba(255,255,255,.025);padding:16px 18px;margin:20px 0}
+.ic-note span{flex:none;color:var(--yellow,#e8c43d);font:10px/1.8 monospace;letter-spacing:.12em}
+.ic-note p{margin:0;color:var(--muted,#8c9aa4);font-size:13px}
+.ic-note-warn{border-left-color:var(--amber,#ffb32c)}
+.ic-note-warn span{color:var(--amber,#ffb32c)}
+.ic-cross{border:1px dashed var(--line,#26313a);padding:14px 18px;font-size:14px}
+.ic-cross a{color:var(--yellow,#e8c43d)}
+.ic-pr{display:inline-block;margin:0 0 14px;padding:4px 10px;border:1px solid var(--line,#26313a);color:var(--muted,#8c9aa4);font-size:11px;letter-spacing:.06em}
+.ic-goods{list-style:none;margin:20px 0;padding:0;display:grid;gap:14px}
+.ic-goods li{border:1px solid var(--line,#26313a);background:var(--panel,#0d1217);padding:18px 20px}
+.ic-goods li p{margin:0 0 12px;color:var(--muted,#8c9aa4);font-size:13px}
+.ic-goods-links{display:flex;flex-wrap:wrap;gap:10px}
+.ic-goods-links a{border:1px solid var(--yellow,#e8c43d);color:var(--yellow,#e8c43d);padding:7px 14px;font-size:12px;text-decoration:none;transition:.2s}
+.ic-goods-links a:hover{background:var(--yellow,#e8c43d);color:var(--bg,#06090c)}
+.ic-sources{margin:0 0 14px;padding-left:20px;color:var(--muted,#8c9aa4);font-size:13px}
+.ic-sources a{color:var(--yellow,#e8c43d)}
+.ic-disclaimer{color:var(--muted,#8c9aa4);font-size:12px;line-height:1.85}
+.ic-disclaimer a{color:var(--yellow,#e8c43d)}
+@media(max-width:600px){.ic-page{padding:32px 16px 72px}.ic-page h1{font-size:22px}.ic-note{flex-direction:column;gap:8px}}
