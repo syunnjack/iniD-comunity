@@ -30,6 +30,8 @@ jobs:
           # 未設定のときは追跡パラメータの付かない通常リンクになり、PR表記も出ない。
           NEXT_PUBLIC_AMAZON_ASSOCIATE_TAG: ${{ vars.AMAZON_ASSOCIATE_TAG }}
           NEXT_PUBLIC_RAKUTEN_AFFILIATE_ID: ${{ vars.RAKUTEN_AFFILIATE_ID }}
+          # Search Console の所有権確認。Variables の GOOGLE_SITE_VERIFICATION に置く。
+          NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION: ${{ vars.GOOGLE_SITE_VERIFICATION }}
       - uses: actions/configure-pages@v5
         with:
           enablement: true
